@@ -1,0 +1,24 @@
+{
+  "name": "cleveland-pta-calendar",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "deploy": "gh-pages -d dist"
+},
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^8.1.1"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.21",
+    "@fullcalendar/daygrid": "^6.1.21",
+    "@fullcalendar/google-calendar": "^6.1.21",
+    "@fullcalendar/icalendar": "^6.1.21",
+    "@fullcalendar/interaction": "^6.1.21",
+    "@fullcalendar/list": "^6.1.21"
+  }
+}
