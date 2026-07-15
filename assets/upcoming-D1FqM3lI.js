@@ -1,4 +1,4 @@
-import{r as e}from"./google-Ba3H4_7w.js";async function t(){let t=(await e()).slice(0,3);document.querySelector(`#app`).innerHTML=`
+import{r as e}from"./google-DVMjqCrz.js";async function t(){let t=(await e()).slice(0,3);document.querySelector(`#app`).innerHTML=`
 
 <div class="home-upcoming">
 
@@ -16,7 +16,9 @@ import{r as e}from"./google-Ba3H4_7w.js";async function t(){let t=(await e()).sl
 
                 <strong>${n}</strong>
 
-                <div>${e.title}</div>
+               <div style="margin-top:6px;">
+    ${e.title}
+</div>
 
                 ${r?`<div>${r}</div>`:``}
 
