@@ -1,5 +1,4 @@
-import{r as e}from"./google-E0V_GNiN.js";async function t(){let t=(await e()).slice(0,3);document.querySelector(`#app`).innerHTML=`
-
+import{r as e}from"./google-DKaxwdsr.js";async function t(){let t=(await e()).slice(0,3);document.querySelector(`#app`).innerHTML=`
 <div class="home-upcoming">
 
 <h1>UPCOMING EVENTS</h1>
@@ -8,38 +7,31 @@ import{r as e}from"./google-E0V_GNiN.js";async function t(){let t=(await e()).sl
 See what's happening around Cleveland!
 </p>
 
-<div class="dots"></div>
+<div class="big-dots"></div>
 
-${t.map(e=>{let t=new Date(e.start),n=t.toLocaleDateString(`en-US`,{month:`long`,day:`numeric`}),r=e.allDay?``:t.toLocaleTimeString(`en-US`,{hour:`numeric`,minute:`2-digit`});return`
+${t.map((e,n)=>{let r=new Date(e.start),i=r.toLocaleDateString(`en-US`,{month:`long`,day:`numeric`}),a=e.allDay?``:r.toLocaleTimeString(`en-US`,{hour:`numeric`,minute:`2-digit`});return`
+<p class="event-block">
 
-<p style="margin:20px 0; font-size:18pt;">
-
-<strong>${n}</strong><br>
+<strong>${i}</strong><br>
 
 ${e.title}
 
-${r?`<br>${r}`:``}
+${a?`<br>${a}`:``}
 
 </p>
 
-<div style="width:50px; margin:15px auto; border-top:6px dotted #f4c400;"></div>
-
+${n<t.length-1?`<div class="small-dots"></div>`:``}
 `}).join(``)}
 
-<p style="margin-top:20px; font-size:18pt;">
-
+<p class="calendar-wrapper">
 <a
-href="https://clevelandpta.membershiptoolkit.com/2026_2027calendar"
-class="calendar-link">
-
+class="calendar-link"
+href="https://clevelandpta.membershiptoolkit.com/2026_2027calendar">
 View Full Calendar →
-
 </a>
-
 </p>
 
 </div>
-
 `}t(),(function(){let e=`font-weight: normal;`,t=`font-weight: bold;`,n=`default`,r=Object.freeze({assert:!0,error:!0,warn:!0}),i={expand:!1,defaultEvent:void 0,event:void 0,label:`AutoConsoleGroup`,showTime:!0},a={profile:0,profileEnd:0,timeStamp:0,trace:0},o=Object.assign(console),{fromEntries:s,keys:c}=Object,l=e=>[e,o[e]],ee=e=>t=>[t,function(n){e[t]=n}],u=(e,t)=>s(c(e).map(t)),d=!(typeof window>`u`||typeof window.matchMedia!=`function`)&&window.matchMedia(`(prefers-color-scheme: dark)`).matches,f=d?`color: #A9C7FB;`:`color: #135CD2;`,p=d?`color: #E3E3E3;`:`color: #1F1F1F;`,m=`5.5.9`,te=`iframeResizer`,ne=`init`,re=`message`,ie=`pageInfo`,ae=`parentInfo`,h=`scrollToOffset`,oe=`data-iframe-size`,se=`data-iframe-overflowed`,ce=`data-iframe-ignore`,le=`height`,ue=`width`,de=`offset`,fe=`offsetSize`,pe=`string`,g=`number`,me=`function`,he=`auto`,ge=`readystatechange`,_e=`bottom`,ve=`right`,ye=`autoResizeEnabled`,be=Symbol(`sizeChanged`),xe=`manualResize`,Se=`parentResize`,Ce={[xe]:1,[Se]:1},we=`setOffsetSize`,Te=`resizeObserver`,Ee=`overflowObserver`,De=`mutationObserver`,Oe=`visibilityObserver`,ke=`[iFrameSizer]`,Ae=new Set([`head`,`body`,`meta`,`base`,`title`,`script`,`link`,`style`,`map`,`area`,`option`,`optgroup`,`template`,`track`,`wbr`,`nobr`]),_=e=>{if(!e)return``;let t=-559038744,n=1103547984;for(let r,i=0;i<e.length;i++)r=e.codePointAt(i),t=Math.imul(t^r,2246822519),n=Math.imul(n^r,3266489917);return t^=Math.imul(t^n>>>15,1935289751),n^=Math.imul(n^t>>>15,3405138345),t^=n>>>16,n^=t>>>16,(2097152*(n>>>0)+(t>>>11)).toString(36)},v=e=>e.replace(/[A-Za-z]/g,e=>String.fromCodePoint((e<=`Z`?90:122)>=(e=e.codePointAt(0)+19)?e:e-26)),je=[`spjluzl`,`rlf`,`clyzpvu`],y=[`<yi>Puchspk Spjluzl Rlf</><iy><iy>`,`<yi>Tpzzpun Spjluzl Rlf</><iy><iy>`,`Aopz spiyhyf pz hchpshisl dpao ivao Jvttlyjphs huk Vwlu-Zvbyjl spjluzlz.<iy><iy><i>Jvttlyjphs Spjluzl</><iy>Mvy jvttlyjphs bzl, <p>pmyhtl-ylzpgly</> ylxbpylz h svd jvza vul aptl spjluzl mll. Mvy tvyl pumvythapvu cpzpa <b>oaawz://pmyhtl-ylzpgly.jvt/wypjpun</>.<iy><iy><i>Vwlu Zvbyjl Spjluzl</><iy>Pm fvb hyl bzpun aopz spiyhyf pu h uvu-jvttlyjphs vwlu zvbyjl wyvqlja aolu fvb jhu bzl pa mvy myll bukly aol alytz vm aol NWS C3 Spjluzl. Av jvumpyt fvb hjjlwa aolzl alytz, wslhzl zla aol <i>spjluzl</> rlf pu <p>pmyhtl-ylzpgly</> vwapvuz av <i>NWSc3</>.<iy><iy>Mvy tvyl pumvythapvu wslhzl zll: <b>oaawz://pmyhtl-ylzpgly.jvt/nws</>`,`<i>NWSc3 Spjluzl Clyzpvu</><iy><iy>Aopz clyzpvu vm <p>pmyhtl-ylzpgly</> pz ilpun bzlk bukly aol alytz vm aol <i>NWS C3</> spjluzl. Aopz spjluzl hssvdz fvb av bzl <p>pmyhtl-ylzpgly</> pu Vwlu Zvbyjl wyvqljaz, iba pa ylxbpylz fvby wyvqlja av il wbispj, wyvcpkl haaypibapvu huk il spjluzlk bukly clyzpvu 3 vy shaly vm aol NUB Nlulyhs Wbispj Spjluzl.<iy><iy>Pm fvb hyl bzpun aopz spiyhyf pu h uvu-vwlu zvbyjl wyvqlja vy dlizpal, fvb dpss ullk av wbyjohzl h svd jvza vul aptl jvttlyjphs spjluzl.<iy><iy>Mvy tvyl pumvythapvu cpzpa <b>oaawz://pmyhtl-ylzpgly.jvt/wypjpun</>.`,`<iy><yi>Zvsv spjluzl kvlz uva zbwwvya jyvzz-kvthpu</><iy><iy>Av bzl <p>pmyhtl-ylzpgly</> dpao jyvzz kvthpu pmyhtlz fvb ullk lpaoly aol Wyvmlzzpvuhs vy Ibzpulzz spjluzlz. Mvy klahpsz vu bwnyhkl wypjpun wslhzl jvuahja pumv@pmyhtl-ylzpgly.jvt.`,`Pu whnl spurpun ylxbpylz h Wyvmlzzpvuhs vy Ibzpulzz spjluzl. Wslhzl zll <b>oaawz://pmyhtl-ylzpgly.jvt/wypjpun</> mvy tvyl klahpsz.`],Me=[`NWSc3`,`zvsv`,`wyv`,`ibzpulzz`,`vlt`],Ne=Object.fromEntries([`2cgs7fdf4xb`,`1c9ctcccr4z`,`1q2pc4eebgb`,`ueokt0969w`,`w2zxchhgqz`,`1umuxblj2e5`,`2b5sdlfhbev`,`zo4ui3arjo`,`oclbb4thgl`].map((e,t)=>[e,Math.max(0,t-1)])),b=e=>v(y[e]);var Pe=e=>{let t=e[v(je[0])]||e[v(je[1])]||e[v(je[2])];if(!t)return-1;let n=t.split(`-`),r=function(e=``){let t=-2,n=_(v(e));return n in Ne&&(t=Ne[n]),t>4?t-4:t}(n[0]);return r===0||(e=>e[2]===_(e[0]+e[1]))(n)||(r=-2),r};let Fe=(e,...t)=>setTimeout(()=>e(...t),0),Ie=e=>{let t=!1;return function(){return t?void 0:(t=!0,Reflect.apply(e,this,arguments))}},Le=e=>e,x=e=>Math.round(1e3*e)/1e3,Re=e=>e.charAt(0).toUpperCase()+e.slice(1),ze=e=>`${e}`!=``&&e!==void 0,Be=e=>e(),S=(e,t,n)=>{if(typeof e!==t)throw TypeError(`${n} is not a ${Re(t)}`)},C={br:`
 `,rb:`\x1B[31;1m`,bb:`\x1B[34;1m`,b:`\x1B[1m`,i:`\x1B[3m`,u:`\x1B[4m`,"/":`\x1B[m`},Ve=Object.keys(C),He=RegExp(`<(${Ve.join(`|`)})>`,`gi`),w=(e,t)=>C[t]??``,Ue=!0,We=te,T=(E=function(s={}){let c={},d={},f=[],p={...i,expand:!s.collapsed||i.expanded,...s},m=``;function te(){f.length=0,m=``}function ne(){delete p.event,te()}let re=()=>!!f.some(([e])=>e in r)||!!p.expand;function ie(){if(f.length!==0){o[re()?`group`:`groupCollapsed`](`%c${p.label}%c ${(e=>{let t=e.event||e.defaultEvent;return t?`${t}`:``})(p)} %c${p.showTime?m:``}`,e,t,`font-weight: normal;font-style: italic;`);for(let[e,...t]of f)o.assert(e in o,`Unknown console method: ${e}`),e in o&&o[e](...t);o.groupEnd(),ne()}else ne()}function ae(){m===``&&(m=function(){let e=new Date,t=(t,n)=>e[t]().toString().padStart(n,`0`);return`@ ${t(`getHours`,2)}:${t(`getMinutes`,2)}:${t(`getSeconds`,2)}.${t(`getMilliseconds`,3)}`}(),queueMicrotask(()=>queueMicrotask(ie)))}function h(e,...t){f.length===0&&ae(),f.push([e,...t])}function oe(e=n,...t){c[e]?h(`log`,`${e}: ${performance.now()-c[e]} ms`,...t):h(`timeLog`,e,...t)}return{...u(p,ee(p)),...u(console,e=>[e,(...t)=>h(e,...t)]),...u(a,l),assert:function(e,...t){!0!==e&&h(`assert`,e,...t)},count:function(e=n){d[e]?d[e]+=1:d[e]=1,h(`log`,`${e}: ${d[e]}`)},countReset:function(e=n){delete d[e]},endAutoGroup:ie,errorBoundary:e=>(...t)=>{let n;try{n=e(...t)}catch(e){if(!Error.prototype.isPrototypeOf(e))throw e;h(`error`,e),ie()}return n},event:function(e){ae(),p.event=e},purge:te,time:function(e=n){ae(),c[e]=performance.now()},timeEnd:function(e=n){oe(e),delete c[e]},timeLog:oe,touch:ae}},E?.__esModule?E.default:E);var E;let Ge=T({label:`${te}(child)`,expand:!1});var Ke;let D=(Ke=`log`,(...e)=>!Ue||Ge[Ke](...e)),{assert:qe,endAutoGroup:O,error:Je,errorBoundary:Ye,event:k,label:Xe,purge:Ze,warn:A}=Ge,j=(Qe=Le,e=>Qe(typeof e==pe?window.chrome?e.replace(He,w):(e=>e.replaceAll(`<br>`,`
 `).replaceAll(/<\/?[^>]+>/gi,``))(e):e));var Qe;let M=(...e)=>Ge.warn(...e.map(j)),N=(e=>(t,n=`renamed to`)=>(r,i,a=``,o=``)=>e(o,`<rb>Deprecated ${t}(${r.replace(`()`,``)})</>\n\nThe <b>${r}</> ${t.toLowerCase()} has been ${n} <b>${i}</>. ${a}Use of the old ${t.toLowerCase()} will be removed in a future version of <i>iframe-resizer</>.`))((e,t)=>M(t)),$e=N(`Method`),et=N(`Method`,`replaced with`),tt=N(`Option`),P=[`min-height`,`min-width`,`max-height`,`max-width`],F=new Set,nt=(e,t)=>window.getComputedStyle(e).getPropertyValue(t),rt=(e,t)=>{return(n=nt(e,t))&&n!==`0px`&&n!==he&&n!==`none`;var n};function I({href:e}){F.has(e)||F.add(e)}let it=(e,t)=>function(e,t){let n=e.style[t];return n?{source:`an inline style attribute`,value:n}:null}(e,t)||function(e,t){for(let n of document.styleSheets)try{for(let r of n.cssRules||[])if(r.selectorText&&e.matches(r.selectorText)){let e=r.style[t];if(e)return{source:n.ownerNode.tagName===`STYLE`?`an inline <style> block`:`stylesheet (${n.href})`,value:e}}}catch{I(n)}return{source:`cross-origin stylesheet`,value:nt(e,t)}}(e,t),at=(e,t)=>{let{source:n,value:r}=it(e,t),i=(e=>e.tagName?e.tagName.toLowerCase():`unknown`)(e);M(`The <b>${t}</> CSS property is set to <b>${r}</> on the <b><${i}></> element via ${n}. This may cause issues with the correct operation of <i>iframe-resizer</>.\n\nIf you wish to restrict the size of the iframe, then you should set this property on the iframe element itself, not the content inside it.`)};function ot(){for(let e of[document.documentElement,document.body])for(let t of P)rt(e,t)&&at(e,t)}let L=e=>t=>t===void 0?void 0:e(t),R=L(e=>e===`true`),st=L(Number),ct=[],lt=(e,t,n,r)=>{e.removeEventListener(t,n,r)},z=(e,t,n,r=!1)=>{e.addEventListener(t,n,r),ct.push(()=>lt(e,t,n,r))},B=e=>e=>{e.size},ut=((e=``)=>t=>n=>{n.size>0&&Je(`${t}Observer ${e}:`,...Array.from(n).flatMap(e=>[`
