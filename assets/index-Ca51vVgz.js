@@ -66,9 +66,8 @@
                 <h3>${e.title}</h3>
 
                 <p class="event-date">
-                    <strong>${i}</strong><br>
-                    ${a}
-                </p>
+    <strong>${i}</strong> • ${a}
+</p>
 
                 <p class="event-card-description">
                     ${s}
