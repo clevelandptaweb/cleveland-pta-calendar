@@ -18,6 +18,27 @@
 
   <div id="app"></div>
 
+  <script>
+function sendHeight() {
+  const height = document.documentElement.scrollHeight;
+  parent.postMessage(
+    {
+      type: 'upcomingHeight',
+      height: height
+    },
+    '*'
+  );
+}
+
+window.addEventListener('load', sendHeight);
+window.addEventListener('resize', sendHeight);
+
+// Wait for JS-rendered events to finish loading
+setTimeout(sendHeight, 300);
+setTimeout(sendHeight, 800);
+setTimeout(sendHeight, 1500);
+</script>
+
 </body>
 
 </html>
