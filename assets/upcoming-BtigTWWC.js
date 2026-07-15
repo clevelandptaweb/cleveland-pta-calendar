@@ -1,4 +1,4 @@
-import{r as e}from"./google-Dn9YpXej.js";async function t(){let t=(await e()).slice(0,3);document.querySelector(`#app`).innerHTML=`
+import{r as e}from"./google-CwGy3ubr.js";async function t(){let t=(await e()).slice(0,3);document.querySelector(`#app`).innerHTML=`
 <div class="home-upcoming">
 
 <h1>UPCOMING EVENTS</h1>
