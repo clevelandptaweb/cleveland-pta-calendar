@@ -1,4 +1,4 @@
-import{r as e}from"./google-M_YZAl6l.js";async function t(){let t=(await e()).slice(0,3);document.querySelector(`#app`).innerHTML=`
+import{r as e}from"./google-tvpA4MIY.js";async function t(){let t=(await e()).slice(0,3);document.querySelector(`#app`).innerHTML=`
 
 <div class="home-upcoming">
 
