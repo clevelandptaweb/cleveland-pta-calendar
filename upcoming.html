@@ -9,7 +9,7 @@
   <title>Upcoming Events</title>
 
 
-  <script type="module" crossorigin src="/cleveland-pta-calendar/assets/upcoming-Bfd6V1xq.js"></script>
+  <script type="module" crossorigin src="/cleveland-pta-calendar/assets/upcoming-BpF_E-lt.js"></script>
   <link rel="modulepreload" crossorigin href="/cleveland-pta-calendar/assets/google-NiJ7mJ0b.js">
   <link rel="stylesheet" crossorigin href="/cleveland-pta-calendar/assets/google-BFoR4wKc.css">
 </head>
@@ -18,26 +18,6 @@
 
   <div id="app"></div>
 
-  <script>
-function sendHeight() {
-  const height = document.documentElement.scrollHeight;
-  parent.postMessage(
-    {
-      type: 'upcomingHeight',
-      height: height
-    },
-    '*'
-  );
-}
-
-window.addEventListener('load', sendHeight);
-window.addEventListener('resize', sendHeight);
-
-// Wait for JS-rendered events to finish loading
-setTimeout(sendHeight, 300);
-setTimeout(sendHeight, 800);
-setTimeout(sendHeight, 1500);
-</script>
 
 </body>
 
