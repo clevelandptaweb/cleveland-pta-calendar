@@ -9,7 +9,7 @@ See what's happening around Cleveland!
 
 <div class="big-dots"></div>
 
-${t.map((e,n)=>{let r=new Date(e.start),i=r.toLocaleDateString(`en-US`,{month:`long`,day:`numeric`}),a=e.allDay?``:r.toLocaleTimeString(`en-US`,{hour:`numeric`,minute:`2-digit`});return`
+${t.map((e,n)=>{let r;if(e.allDay){let[t,n,i]=e.start.split(`-`).map(Number);r=new Date(t,n-1,i)}else r=new Date(e.start);let i=r.toLocaleDateString(`en-US`,{month:`long`,day:`numeric`}),a=e.allDay?``:r.toLocaleTimeString(`en-US`,{hour:`numeric`,minute:`2-digit`});return`
 <p class="event-block">
 
 <strong>${i}</strong><br>
