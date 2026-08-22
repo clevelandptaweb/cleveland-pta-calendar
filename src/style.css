@@ -544,153 +544,334 @@ body{
    MOBILE
 =========================== */
 
-@media (max-width: 768px){
+@media (max-width:768px){
 
-    .page{
-
-        padding:16px;
-
-        margin:20px auto;
-
+    body{
+        overflow-x:hidden;
     }
 
+    .page{
+        padding:16px;
+        margin:16px auto;
+    }
+
+    /* ---------- Hero ---------- */
+
+    .hero{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .hero h1{
+        font-size:2.1rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+        margin-top:12px;
+    }
+
+    /* ---------- Coming Up ---------- */
+
     .section-header{
-
+        display:flex;
         flex-direction:column;
-
-        align-items:stretch;
-
+        gap:12px;
     }
 
     .coming-up h2{
-
+        font-size:2rem;
         text-align:center;
+        margin-bottom:10px;
+    }
 
-        font-size:2.2rem;
-
+    .header-actions{
+        width:100%;
     }
 
     .event-search{
-
         width:100%;
-
         box-sizing:border-box;
-
+        padding:10px 16px;
+        font-size:.95rem;
     }
 
     .event-cards{
-
-        display:flex;
-
-        overflow-x:auto;
-
-        gap:16px;
-
-        padding-bottom:10px;
-
-        scroll-snap-type:x mandatory;
-
-        -webkit-overflow-scrolling:touch;
-
-    }
-
-    .event-cards::-webkit-scrollbar{
-
-        display:none;
-
+        display:grid;
+        grid-template-columns:1fr;
+        gap:14px;
     }
 
     .event-card{
-
-        min-width:90%;
-
-        flex:none;
-
-        scroll-snap-align:center;
-
+        display:block;
+        padding:16px;
+        border-radius:16px;
     }
+
+    /* Hide icons on phones */
+
+    .event-icon{
+        display:none !important;
+    }
+
+    .event-info{
+        width:100%;
+    }
+
+    .event-info h3{
+        margin:0 0 6px;
+        font-size:1.3rem;
+        line-height:1.25;
+    }
+
+    .event-date{
+        margin:0 0 8px;
+        font-size:.95rem;
+        color:#666;
+    }
+
+    .event-date strong{
+        color:#375EA2;
+    }
+
+    /* Hide description on phones */
+
+    .event-card-description{
+        display:none;
+    }
+
+    .view-all-wrapper{
+        margin-top:18px;
+    }
+
+    .view-all-btn{
+        font-size:1rem;
+    }
+
+    /* ---------- Calendar ---------- */
 
     .calendar-card{
-
         padding:12px;
-
     }
 
-}
-@media (max-width:768px){
-
     .fc-toolbar{
-
-        flex-direction:column;
-
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-items:center;
         gap:10px;
-
     }
 
     .fc-toolbar-title{
-
+        width:100%;
+        text-align:center;
+        order:-1;
         font-size:2rem !important;
-
     }
 
-}
-@media (max-width:768px){
+    .fc-button{
+        padding:.6em .9em !important;
+    }
+
+    .fc-daygrid-day{
+        min-height:70px;
+    }
+
+    /* ---------- Modal ---------- */
 
     .event-modal{
-
+        width:95vw;
         padding:24px;
-
-        border-radius:22px;
-
+        border-radius:20px;
     }
 
     .event-header h2{
-
         font-size:2rem;
-
     }
 
     .meta-row{
-
-        font-size:1.2rem;
-
+        font-size:1.1rem;
     }
 
-}
-@media (max-width:768px){
-
-    .fc-daygrid-day{
-
-        min-height:70px;
-
+    .event-description{
+        font-size:1.1rem;
+        line-height:1.7;
     }
 
-}
-
-@media (max-width:768px){
+    /* ---------- List View ---------- */
 
     .fc-list-event-title{
-
-        font-size:1.15rem;
-
-        font-family:"felt-tip-woman";
-
+        font-size:1rem;
+        font-family:"felt-tip-woman",sans-serif;
     }
 
     .fc-list-day-cushion{
-
         background:#375EA2 !important;
-
-        color:white;
-
+        color:#fff;
     }
 
     .fc-list-day-text,
     .fc-list-day-side-text{
-
-        color:white !important;
-
+        color:#fff !important;
         text-decoration:none;
+    }
+
+}
+
+/* ===========================
+   HOMEPAGE UPCOMING
+=========================== */
+
+body{
+    margin:0;
+    background:transparent;
+}
+
+.home-upcoming{
+    padding:0 25px 10px;
+    text-align:center;
+    color:#333;
+    font-family:"felt-tip-woman",sans-serif;
+}
+
+.home-upcoming h1{
+    margin:0;
+    color:#233b9e;
+    font-family:"hey-eloise",sans-serif !important;
+    font-size:38pt !important;
+    font-weight:900 !important;
+    line-height:1 !important;
+}
+
+.subtitle{
+    margin:15px 0;
+    color:#e63946;
+    font-family:"felt-tip-woman",sans-serif !important;
+    font-size:18pt !important;
+    line-height:1.35 !important;
+}
+
+.big-dots{
+
+    width:120px;
+    margin:15px auto;
+    border-top:6px dotted #f4c400;
+
+}
+
+.small-dots{
+
+    width:50px;
+    margin:15px auto;
+    border-top:6px dotted #f4c400;
+
+}
+
+.event-block{
+
+    margin:20px 0;
+    font-size:18pt;
+    line-height:1.45;
+
+}
+
+.event-block strong{
+
+    display:block;
+    margin-bottom:6px;
+    font-size:18pt;
+    font-weight:bold;
+
+}
+
+.calendar-wrapper{
+
+     margin-top:12px;
+    margin-bottom:0;
+}
+
+.calendar-link{
+
+    color:#2f6fb7;
+    font-size:18pt;
+    font-weight:bold;
+    text-decoration:none;
+
+}
+
+.calendar-link:hover{
+
+    color:#31BCD3;
+
+}
+
+
+/* ===========================
+   HOMEPAGE UPCOMING MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .home-upcoming{
+
+        padding:18px;
+
+    }
+
+   .home-upcoming h1{
+    font-size:2.25rem;
+    line-height:1.1;
+    font-family:"hey-eloise", sans-serif;
+}
+    .subtitle{
+
+        font-size:1.3rem;
+
+        margin:12px 0 16px;
+
+    }
+
+    .dots{
+
+        width:85px;
+
+        margin:12px auto;
+
+    }
+
+    .dots.small{
+
+        width:45px;
+
+        margin:10px auto;
+
+    }
+
+    .event{
+
+        margin:16px 0;
+
+        font-size:1.2rem;
+
+        line-height:1.45;
+
+    }
+
+    .event strong{
+
+        font-size:1.35rem;
+
+        margin-bottom:4px;
+
+    }
+
+    .calendar-link{
+
+        display:inline-block;
+
+        margin-top:18px;
+
+        font-size:1.3rem;
 
     }
 

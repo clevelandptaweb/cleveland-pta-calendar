@@ -41,15 +41,38 @@ let showingAll = false
         })
 
         container.querySelectorAll('.event-card').forEach(card => {
+card.addEventListener('click', () => {
 
-            card.addEventListener('click', () => {
+    const event = events[Number(card.dataset.index)]
 
-                const event = events[Number(card.dataset.index)]
+    let start
 
-                showEvent({
-                    title: event.title,
-                    start: new Date(event.start),
-                    extendedProps: event.extendedProps
+    if (event.allDay) {
+        const [year, month, day] = event.start.split('-').map(Number)
+        start = new Date(year, month - 1, day)
+    } else {
+        start = new Date(event.start)
+    }
+
+    let end = null
+
+    if (event.end) {
+
+        if (event.allDay) {
+            const [year, month, day] = event.end.split('-').map(Number)
+            end = new Date(year, month - 1, day)
+        } else {
+            end = new Date(event.end)
+        }
+
+    }
+
+    showEvent({
+        title: event.title,
+        start,
+        end,
+        allDay: event.allDay,
+        extendedProps: event.extendedProps
                 })
 
             })

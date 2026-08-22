@@ -9,97 +9,141 @@ export function showEvent(event) {
     const overlay = document.createElement('div')
     overlay.className = 'event-modal-overlay'
 
- const startDate = event.start
-    ? event.start.toLocaleDateString([], {
-        weekday: 'long',
-        month: 'long',
-        day: 'numeric',
-        year: 'numeric'
-    })
-    : ''
+    // Format the date
+    let startDate = ''
 
-let startTime = ''
+    if (event.start) {
 
-if (event.start) {
+        if (event.allDay && event.end) {
 
-    const isMidnight =
-        event.start.getHours() === 0 &&
-        event.start.getMinutes() === 0
+            const endDate = new Date(event.end)
+            endDate.setDate(endDate.getDate() - 1)
 
-    startTime = isMidnight
-        ? 'All Day'
-        : event.start.toLocaleTimeString([], {
-            hour: 'numeric',
-            minute: '2-digit'
-        })
-}
+            const sameDay =
+                event.start.toDateString() === endDate.toDateString()
+
+            if (sameDay) {
+
+                startDate = event.start.toLocaleDateString([], {
+                    weekday: 'long',
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                })
+
+            } else {
+
+                startDate =
+                    `${event.start.toLocaleDateString([], {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    })} – ${endDate.toLocaleDateString([], {
+                        month: 'long',
+                        day: 'numeric',
+                        year: 'numeric'
+                    })}`
+
+            }
+
+        } else {
+
+            startDate = event.start.toLocaleDateString([], {
+                weekday: 'long',
+                month: 'long',
+                day: 'numeric',
+                year: 'numeric'
+            })
+
+        }
+
+    }
+
+    // Format the time
+    let startTime = ''
+
+    if (event.start) {
+
+        startTime = event.allDay
+            ? 'All Day'
+            : event.start.toLocaleTimeString([], {
+                hour: 'numeric',
+                minute: '2-digit'
+            })
+
+    }
 
     const location = event.extendedProps.location || ''
 
     const description = (
-    event.extendedProps.description ||
-    '<em>No additional information available.</em>'
-).replace(
-    /(https?:\/\/[^\s]+)/g,
-    '<a href="$1" target="_blank">$1</a>'
-)
-const style = getEventStyle(event.title)
+        event.extendedProps.description ||
+        '<em>No additional information available.</em>'
+    ).replace(
+        /(https?:\/\/[^\s]+)/g,
+        '<a href="$1" target="_blank">$1</a>'
+    )
+
+    const style = getEventStyle(event.title)
+
     overlay.innerHTML = `
         <div class="event-modal">
 
-    <button class="event-close" aria-label="Close">
-        ✕
-    </button>
+            <button class="event-close" aria-label="Close">
+                ✕
+            </button>
 
-    <div
-        class="event-banner"
-        style="background:${style.color};"
-    ></div>
+            <div
+                class="event-banner"
+                style="background:${style.color};"
+            ></div>
 
-    <div class="event-header">
+            <div class="event-header">
 
-        <h2>${event.title}</h2>
+                <h2>${event.title}</h2>
 
-    </div>
+            </div>
 
-           <div class="event-meta">
+            <div class="event-meta">
 
-    <div class="meta-row">
+                <div class="meta-row">
 
-        <span class="meta-icon">📅</span>
+                    <span class="meta-icon">📅</span>
 
-        <span>${startDate}</span>
+                    <span>${startDate}</span>
 
-    </div>
+                </div>
 
-    <div class="meta-row">
+                <div class="meta-row">
 
-        <span class="meta-icon">🕒</span>
+                    <span class="meta-icon">🕒</span>
 
-        <span>${startTime}</span>
+                    <span>${startTime}</span>
 
-    </div>
+                </div>
 
-    ${
-        location
-            ? `
-        <div class="meta-row">
+                ${
+                    location
+                        ? `
+                <div class="meta-row">
 
-            <span class="meta-icon">📍</span>
+                    <span class="meta-icon">📍</span>
 
-            <span>${location}</span>
+                    <span>${location}</span>
 
-        </div>
-        `
-            : ''
-    }
+                </div>
+                `
+                        : ''
+                }
 
-</div>
+            </div>
+
             <div class="event-description">
 
-    ${description}
+                ${description}
 
-</div>
+            </div>
+
+        </div>
     `
 
     document.body.appendChild(overlay)

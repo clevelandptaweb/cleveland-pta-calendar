@@ -63,3 +63,29 @@ document.querySelector('#app').innerHTML = `
 
 createCalendar(showEvent)
 loadUpcoming()
+function resizeParent() {
+
+    if (window.parent === window) return
+
+    const height = document.documentElement.scrollHeight
+
+    window.parent.postMessage(
+        {
+            type: 'resize-calendar',
+            height
+        },
+        '*'
+    )
+
+}
+
+// Initial resize
+window.addEventListener('load', resizeParent)
+
+// Resize if browser changes
+window.addEventListener('resize', resizeParent)
+
+// Give FullCalendar time to finish rendering
+setTimeout(resizeParent, 300)
+setTimeout(resizeParent, 800)
+setTimeout(resizeParent, 1500)

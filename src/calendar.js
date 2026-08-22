@@ -8,6 +8,8 @@ import listPlugin from '@fullcalendar/list'
 
 export function createCalendar(showEvent) {
 
+    console.log(window.innerWidth)
+
     const isMobile = window.innerWidth < 768
 
     const calendar = new Calendar(document.getElementById('calendar'), {
@@ -75,8 +77,33 @@ export function createCalendar(showEvent) {
 
     })
 
-    calendar.render()
+   calendar.render()
 
-    return calendar
+function resizeParent() {
 
+    if (window.parent === window) return
+
+    const height = document.documentElement.scrollHeight
+
+    window.parent.postMessage(
+        {
+            type: 'resize-calendar',
+            height
+        },
+        '*'
+    )
+
+}
+
+// Initial render
+setTimeout(resizeParent, 300)
+
+// Resize every time the calendar changes
+calendar.on('datesSet', () => {
+
+    setTimeout(resizeParent, 200)
+
+})
+
+return calendar
 }
